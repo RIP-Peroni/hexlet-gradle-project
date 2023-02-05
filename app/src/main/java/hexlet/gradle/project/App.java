@@ -3,18 +3,14 @@
  */
 package hexlet.gradle.project;
 
-import org.apache.commons.lang3.StringUtils;
-
 public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
-
     public static void main(String[] args) {
-        System.out.println(isPalindrome("шалАш"));
+        System.out.println(getFigureSquare(new Quadrate(11)));
     }
 
-    public static boolean isPalindrome(String text) {
-        return text.equalsIgnoreCase(StringUtils.reverse(text));
+    public static String getFigureSquare(Geometric figure) {
+        String name = figure.getName();
+        int square = figure.getSquare();
+        return String.format("Square of %s is %s", name, square);
     }
 }
