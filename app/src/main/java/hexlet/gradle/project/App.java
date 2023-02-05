@@ -9,6 +9,8 @@ public class App {
     }
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        User user1 = new User(1, "Alex");
+        User user2 = new User(1, "John");
+        System.out.println(user1.isEqual(user2));
     }
 }
