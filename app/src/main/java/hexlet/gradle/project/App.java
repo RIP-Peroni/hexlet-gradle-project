@@ -3,14 +3,18 @@
  */
 package hexlet.gradle.project;
 
+import org.apache.commons.lang3.StringUtils;
+
 public class App {
     public String getGreeting() {
         return "Hello World!";
     }
 
     public static void main(String[] args) {
-        User user1 = new User(1, "Alex");
-        User user2 = new User(1, "John");
-        System.out.println(user1.isEqual(user2));
+        System.out.println(isPalindrome("шалАш"));
+    }
+
+    public static boolean isPalindrome(String text) {
+        return text.equalsIgnoreCase(StringUtils.reverse(text));
     }
 }
