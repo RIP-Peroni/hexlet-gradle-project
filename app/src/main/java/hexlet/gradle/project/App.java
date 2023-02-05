@@ -5,14 +5,9 @@ package hexlet.gradle.project;
 
 public class App {
     public static void main(String[] args) {
-        Rational a = new Rational(2, 3);
-        Rational b = new Rational(3, 5);
-        Rational c = new Rational(3, 9);
-        Rational added = a.add(b);
-        Rational subbed = a.sub(b);
-        System.out.println(added);
-        System.out.println(subbed);
-        System.out.println(c);
-        System.out.println(c.getNumer());
+        var seq = new Random(100);
+        var result1 = seq.getNext();
+        var result2 = seq.getNext();
+        System.out.println(result1 != result2);
     }
 }
