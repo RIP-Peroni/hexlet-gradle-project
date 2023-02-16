@@ -9,8 +9,10 @@
 plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
     id 'application'
+    id 'java'
     id 'se.patrikerdes.use-latest-versions' version '0.2.18'
     id 'com.github.ben-manes.versions' version '0.45.0'
+    id 'checkstyle'
 }
 
 repositories {
@@ -25,7 +27,7 @@ dependencies {
     // This dependency is used by the application.
     implementation 'com.google.guava:guava:31.1-jre'
 
-    implementation 'org.apache.commons:commons-lang3:3.12.0'
+    implementation 'com.jtransc:jtransc-rt:0.6.8'
 }
 
 application {
@@ -33,7 +35,27 @@ application {
     mainClass = 'hexlet.gradle.project.App'
 }
 
+jar {
+    manifest {
+        attributes(
+                'Main-Class': 'hexlet.gradle.project.App'
+        )
+    }
+}
+
+compileJava {
+    options.release = 17
+}
+
 tasks.named('test') {
     // Use JUnit Platform for unit tests.
     useJUnitPlatform()
+}
+
+tasks.named('run') {
+    standardInput = System.in
+}
+
+checkstyle {
+    toolVersion '9.2.1'
 }
