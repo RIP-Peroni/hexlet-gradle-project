@@ -1,19 +1,22 @@
 package main.java.hexlet.gradle.project;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class App {
     public static void main(String[] args) {
-        Map<Gamer, String> hm = new HashMap<>();
+        Map<Integer, String> lhm = new CustomLinkedHM();
+        lhm.put(1, "");
+        lhm.put(2, "");
+        lhm.put(3, "");
+        System.out.println(lhm);
+        lhm.get(1);
 
-        Gamer gamer1 = new Gamer(1L, "Dinotrex", "dD34!dfj");
-        Gamer gamer2 = new Gamer(1L, "Dinotrex", "dD34!dfj");
-
-        hm.put(gamer1, "level1");
-        System.out.println(hm.get(gamer1));
-        gamer1.setPassword("icvd(8df3!");
-        System.out.println(hm.get(gamer1));
-        System.out.println(hm.get(gamer2));
+        System.out.println(lhm);
+        lhm.put(4, "");
+        System.out.println(lhm);
+        lhm.put(5, "");
+        System.out.println(lhm);
     }
 }
