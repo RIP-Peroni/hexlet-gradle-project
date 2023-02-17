@@ -11,12 +11,9 @@ public class App {
         Gamer gamer2 = new Gamer(1L, "Dinotrex", "dD34!dfj");
 
         hm.put(gamer1, "level1");
-        hm.put(gamer2, "level2");
-        System.out.println(hm);
-
-        System.out.println(gamer1.hashCode());
-        System.out.println(gamer2.hashCode());
-
-        System.out.println(gamer1.equals(gamer2));
+        System.out.println(hm.get(gamer1));
+        gamer1.setPassword("icvd(8df3!");
+        System.out.println(hm.get(gamer1));
+        System.out.println(hm.get(gamer2));
     }
 }
