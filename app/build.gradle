@@ -32,13 +32,13 @@ dependencies {
 
 application {
     // Define the main class for the application.
-    mainClass = 'hexlet.gradle.project.App'
+    mainClass = 'main.java.hexlet.gradle.project.App'
 }
 
 jar {
     manifest {
         attributes(
-                'Main-Class': 'hexlet.gradle.project.App'
+                'Main-Class': 'main.java.hexlet.gradle.project.App'
         )
     }
 }
