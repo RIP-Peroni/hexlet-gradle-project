@@ -34,11 +34,6 @@ public class Product  implements Comparable<Product> {
     public void setQuality(Integer quality) {
         this.quality = quality;
     }
-
-    /**
-     * @param product 
-     * @return
-     */
     @Override
     public int compareTo(Product product) {
         return this.cost.compareTo(product.cost);
