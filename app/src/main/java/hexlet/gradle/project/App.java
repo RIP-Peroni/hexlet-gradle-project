@@ -45,5 +45,15 @@ public class App {
 //        authorAndBooksMap.put("Толстой", booksTolstoy);
 //
 //        System.out.println("Всего мы храним " + Util.getAmountOfBooks(authorAndBooksMap) + " книг");
+
+        List<User> userList = new ArrayList<>();
+        User user1 = new User("Egor", new Date());
+        User user2 = new User("Boris", new Date());
+        userList.add(user1);
+        userList.add(user2);
+
+        int index = Util.findElementIndex(userList, user1);
+//        int index = Util.findElementIndex(userList, user2);
+        System.out.println(index);
     }
 }

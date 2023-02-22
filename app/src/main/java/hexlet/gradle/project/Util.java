@@ -15,4 +15,22 @@ public class Util {
         }
         return result;
     }
+
+    /**
+     *
+     * нельзя без <T>
+     * Обобщённые классы - это хорошо, но что если нам в одном классе нужны разные generics
+     * @param list
+     * @param element
+     * @return
+     * @param <T>
+     */
+    public static <T> int findElementIndex(List<T> list, T element) {
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i).equals(element)) {
+                return i;
+            }
+        }
+        return 0;
+    }
 }
